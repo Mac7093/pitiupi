@@ -32,7 +32,6 @@ import pitiupi.presentation.shell.PeerIpv4;
 public class BatalhaNavalPanel extends JPanel implements GameUiSink {
     private static final String CARD_LOBBY = "lobby";
     private static final String CARD_GAME = "game";
-    private static final Color GREEN = new Color(0, 130, 0);
     private static final Color RED = new Color(170, 0, 0);
 
     private final BatalhaNavalController controller;
@@ -298,11 +297,7 @@ public class BatalhaNavalPanel extends JPanel implements GameUiSink {
     public void onStatusChanged(String text, boolean myTurn) {
         if (inGame) {
             lblStatus.setText(text);
-            if (myTurn) {
-                lblStatus.setForeground(Color.DARK_GRAY);
-            } else {
-                lblStatus.setForeground(Color.DARK_GRAY);
-            }
+            lblStatus.setForeground(Color.DARK_GRAY);
         } else {
             lblLobbyMessage.setText(text);
         }
